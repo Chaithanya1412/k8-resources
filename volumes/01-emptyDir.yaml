@@ -4,7 +4,7 @@ metadata:
   name: empty-Dir-Demo
   namespace: default
 spec:
-  Contrainers:
+  contrainers:
     - name: nginx
       image: nginx
   volumeMounts:
