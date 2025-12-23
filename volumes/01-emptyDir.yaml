@@ -5,19 +5,19 @@ metadata:
   namespace: default
 spec:
   containers:
-    - name: nginx
-      image: nginx
-  volumeMounts:
+  - name: nginx
+    image: nginx
+    volumeMounts:
     - mountPath: /var/log/nginx
       name: nginx-logs
   
-    - name: almalinux
-      image: almalinux:9
-  volumeMounts:
+  - name: almalinux
+    image: almalinux:9
+    volumeMounts:
     - mountPath: /mnt/nginx-log
       name: nginx-logs
       readOnly: true
   volumes:
-    - name: nginx-logs
-      emptyDir:
-        sizelimt: 100Mi
+  - name: nginx-logs
+    emptyDir:
+      sizelimt: 100Mi
